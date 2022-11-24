@@ -82,7 +82,7 @@ public class ReadText {
 
     private String checkBook(String book, int chapter, int startingVerse, int endingVerse, int numberActualArgs, int [] totalVerses) {
         StringBuilder bookString = new StringBuilder();
-        File file = new File("books_of_bible/" + book);
+        File file = new File("biblereader/books_of_bible/" + book);
         FileReader fr;
         try {
             fr = new FileReader(file);
