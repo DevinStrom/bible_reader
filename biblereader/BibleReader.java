@@ -1,8 +1,11 @@
 package biblereader;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 class BibleReader {
@@ -14,7 +17,10 @@ class BibleReader {
 
     public static <T> void main(String [] args) {
         //get user input
+        //String source = args.toString();
+        //InputStream stream = new ByteArrayInputStream(source.getBytes(StandardCharsets.UTF_8));
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
         try {
             String textToRead = reader.readLine();
             CheckInput check = new CheckInput();
