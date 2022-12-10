@@ -82,7 +82,7 @@ public class ReadText {
 
     private String checkBook(String book, int chapter, int startingVerse, int endingVerse, int numberActualArgs, int [] totalVerses) {
         StringBuilder bookString = new StringBuilder();
-        File file = new File("biblereader/books_of_bible/" + book);
+        File file = new File("books_of_bible/" + book);
         FileReader fr;
         try {
             fr = new FileReader(file);
@@ -110,7 +110,7 @@ public class ReadText {
             else if(numberActualArgs == 4) {
                 while((line = br.readLine()) != null){
                     for(int index : totalVerses) {
-                        if(line.startsWith(chapter + ":" + index)) {
+                        if(line.startsWith(chapter + ":" + index + ":")) {
                             bookString.append(line + "\n");
                         }
                     }
